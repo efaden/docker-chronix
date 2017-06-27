@@ -5,8 +5,6 @@ FROM phusion/baseimage:0.9.22
 
 MAINTAINER Eric Faden <efaden@gmail.com>
 
-EXPOSE 8338
-
 ENV DEBIAN_FRONTEND="noninteractive" 
 
 # Use baseimage-docker's init system.
@@ -21,7 +19,7 @@ RUN \
   rm -rf /var/lib/apt/lists/* && \
   rm -rf /var/cache/oracle-jdk8-installer
 
-# Install Chronix
+# Install Required Stuff
 RUN apt-get -y update && apt-get -y install \
       zip \
       wget \
